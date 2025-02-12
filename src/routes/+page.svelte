@@ -15,9 +15,9 @@
 	<Input bind:value={inputState} placeholder="1d20 + 5" type="text" />
 	{#if expression}
 		<div class="flex gap-1 p-1 text-lg text-zinc-800">
-			<DisplayExpression exp={expression[0]} />
+			<DisplayExpression exp={expression.ex} />
 			<span>=</span>
-			<div>{expression[1]}</div>
+			<div>{expression.v}</div>
 		</div>
 	{/if}
 </div>

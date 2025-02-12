@@ -28,7 +28,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"mini-diceroller": "^1.4.3",
+		"mini-diceroller": "^1.5.1",
 		"tailwind-merge": "^3.0.1"
 	}
 }

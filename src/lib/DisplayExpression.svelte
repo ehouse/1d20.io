@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { exec } from 'mini-diceroller';
-	import type { EvalExpression, Expression } from 'mini-diceroller';
+	import type { Expression } from 'mini-diceroller';
 	import Self from './DisplayExpression.svelte';
 
 	interface props {
