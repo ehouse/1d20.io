@@ -7,8 +7,10 @@
 
 <input
 	class={twMerge([
-		'active block w-full rounded-lg border border-zinc-300 bg-gray-50 p-2.5 text-sm text-zinc-900 focus:border-zinc-500 focus:ring-zinc-500',
-		'outline-none'
+		'text-lg shadow-sm',
+		'border border-zinc-300 focus:border-zinc-500 focus:ring-zinc-500',
+		'w-full rounded-lg bg-gray-50 p-2.5 text-zinc-900',
+		'outline-hidden'
 	])}
 	bind:value
 	{...props}
