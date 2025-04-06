@@ -36,10 +36,10 @@
 			}
 		}}
 	/>
-	<div class="mt-2 min-h-18 rounded border-zinc-300 bg-gray-100 p-2 shadow-sm">
+	<div class="mt-2 min-h-18 rounded border border-zinc-300 bg-gray-100 px-2.5 py-3.5 shadow-sm">
 		<div class="flex flex-row gap-2 text-lg text-zinc-800">
 			<div class="flex flex-grow">
-				<div class="mr-2 inline-block min-h-14 w-1 self-stretch bg-rose-300"></div>
+				<div class="mr-2 inline-block min-h-14 min-w-1 self-stretch bg-rose-400"></div>
 				{#if evaluatedExpression}
 					<DisplayExpression expression={evaluatedExpression} />
 				{/if}
@@ -50,11 +50,13 @@
 				avg={evaluatedExpression?.stats.avg ?? 0}
 			/>
 		</div>
-		<ExpressionLog {expressionLogArray} />
+		{#if expressionLogArray.length > 0}
+			<ExpressionLog
+				{expressionLogArray}
+				clearExpressionLog={() => {
+					expressionLogArray = [];
+				}}
+			/>
+		{/if}
 	</div>
 </div>
-
-<!-- 'text-lg shadow-sm',
-'border border-zinc-300 focus:border-zinc-500 focus:ring-zinc-500',
-'w-full rounded-lg bg-gray-50 p-2.5 text-zinc-900',
-'outline-hidden' -->

@@ -2,10 +2,13 @@
 	import '../app.css';
 	import { base } from '$app/paths';
 	import { twMerge } from 'tailwind-merge';
+	import { Shortcuts } from 'svelte-keyboard-shortcuts';
 
 	let { children } = $props();
 	let showHelpModal = $state(false);
 </script>
+
+<Shortcuts options={{ generateKbd: false }} />
 
 <div class=" mx-auto flex w-full max-w-3xl justify-end gap-2 pt-2">
 	<button type="button" class="hover:cursor-pointer" onclick={() => (showHelpModal = true)}>

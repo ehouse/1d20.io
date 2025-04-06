@@ -9,7 +9,7 @@
 	class={twMerge(
 		'text-lg shadow-sm',
 		'border border-zinc-400 focus:border-zinc-500 focus:ring-zinc-800',
-		'w-full rounded bg-gray-50 p-2.5 text-zinc-900',
+		'w-full rounded bg-gray-50 px-2.5 py-2 text-zinc-900',
 		'outline-hidden'
 	)}
 	bind:value

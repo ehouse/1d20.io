@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"mini-diceroller": "^1.5.1",
+		"svelte-keyboard-shortcuts": "^0.0.1",
 		"tailwind-merge": "^3.0.1"
 	}
 }
