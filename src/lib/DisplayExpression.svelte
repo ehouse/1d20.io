@@ -1,19 +1,17 @@
 <script lang="ts">
-	import type { Expression } from 'mini-diceroller';
-	import Self from './DisplayExpression.svelte';
+	import type { EvaluatedExpression } from 'mini-diceroller';
+	import RecursiveExpressionView from './RecursiveExpressionView.svelte';
 
 	interface props {
-		exp: Expression;
+		expression: EvaluatedExpression;
 	}
-	let { exp }: props = $props();
+
+	let { expression }: props = $props();
 </script>
 
-{#if exp.tag === 'number'}
-	<div>{exp.n}</div>
-{:else if exp.tag === 'rollValue'}
-	<div>&#91;{exp.results.toString().replaceAll(',', ' ')}&#93;</div>
-{:else if exp.tag === 'math'}
-	<Self exp={exp.left} />
-	<div>{exp.op}</div>
-	<Self exp={exp.right} />
-{/if}
+<div>
+	<p class="font-bold">{expression.v}</p>
+	<div class="flex tracking-wider">
+		<RecursiveExpressionView exp={expression.ex} />
+	</div>
+</div>

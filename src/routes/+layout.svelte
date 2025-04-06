@@ -7,7 +7,7 @@
 	let showHelpModal = $state(false);
 </script>
 
-<div class=" mx-auto flex w-full max-w-4xl justify-end gap-2 pt-2">
+<div class=" mx-auto flex w-full max-w-3xl justify-end gap-2 pt-2">
 	<button type="button" class="hover:cursor-pointer" onclick={() => (showHelpModal = true)}>
 		<img alt="Help" src={`${base}/help-circle-svgrepo-com.svg`} class="max-w-8" />
 	</button>
