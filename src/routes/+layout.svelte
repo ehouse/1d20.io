@@ -12,7 +12,7 @@
 
 <div class=" mx-auto flex w-full max-w-3xl justify-end gap-2 pt-2">
 	<button type="button" class="hover:cursor-pointer" onclick={() => (showHelpModal = true)}>
-		<img alt="Help" src={`${base}/help-circle-svgrepo-com.svg`} class="max-w-8" />
+		<img alt="Help" src={`${base}/help-circle.svg`} class="max-w-8" />
 	</button>
 	<a href="https://github.com/ehouse/1d20.io" class="rounded-full pt-1">
 		<img alt="Github Project" src={`${base}/github-mark.svg`} class="max-w-6" />
