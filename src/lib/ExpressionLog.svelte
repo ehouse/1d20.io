@@ -13,13 +13,16 @@
 </script>
 
 <div class="flex items-baseline">
-	<div class="flex grow-1 flex-col gap-1 pt-3 text-zinc-600">
+	<div class="flex grow-1 flex-col gap-1 px-3 pt-3">
 		{#each expressionLogArray as logLine}
-			<div class="flex grow-1 flex-row gap-1">
-				<p class="pr-2 text-zinc-400">∴</p>
-				<RecursiveExpression exp={logLine.ex} />
-				<span>=</span>
-				<div>{logLine.v}</div>
+			<div class="grid grid-cols-[1fr_auto] text-zinc-500">
+				<div class="flex gap-1">
+					<span class="font-bold text-zinc-400">∴</span>
+					<div class="justify-self-center font-semibold">{logLine.v}</div>
+				</div>
+				<div class="ml-4 flex flex-row">
+					<RecursiveExpression exp={logLine.ex} />
+				</div>
 			</div>
 		{/each}
 	</div>
