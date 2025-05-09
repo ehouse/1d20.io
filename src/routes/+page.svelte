@@ -32,7 +32,8 @@
 					expressionLogArray.pop();
 				}
 				expressionLogArray.unshift(evaluatedExpression);
-				evaluatedExpression = safeParse(inputState);
+				// Reinstance the input state to trigger reroll effect
+				evaluatedExpression = safeParse(String(inputState));
 			}
 		}}
 	/>
@@ -51,6 +52,7 @@
 			/>
 		</div>
 		{#if expressionLogArray.length > 0}
+			<hr class="mt-4" />
 			<ExpressionLog
 				{expressionLogArray}
 				clearExpressionLog={() => {

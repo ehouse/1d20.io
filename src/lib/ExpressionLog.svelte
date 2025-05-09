@@ -20,7 +20,7 @@
 					<span class="font-bold text-zinc-400">∴</span>
 					<div class="justify-self-center font-semibold">{logLine.v}</div>
 				</div>
-				<div class="ml-4 flex flex-row">
+				<div class="flex min-w-xs flex-row">
 					<RecursiveExpression exp={logLine.ex} />
 				</div>
 			</div>
