@@ -13,7 +13,14 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Building for Testing
+
+```bash
+docker build -t 1d20-test .
+docker run --rm -p 8080:80 1d20-test
+```
+
+## Deploying
 
 ```bash
 npm run build
